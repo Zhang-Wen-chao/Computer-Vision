@@ -34,7 +34,6 @@ salloc -N 1 -n 10 --time=9-0:0:0 -p normal --gres=gpu:1 --nodelist=sist_gpu63
 nvcc -V
 nvidia-smi
 ssh -CY gpu29 //转发可视化窗口
-python -c "import torch;print (torch.cuda.is_available ());print (torch.__version__);import torchvision;print(torchvision.__version__)"
 
 ## The function of each environment
 py38,torch=1.7.1 , for DiffuStereo.
@@ -42,6 +41,23 @@ py39,torch=1.9.0 , for diffusiondet.
 
 paddlepaddle
 python tools/infer.py -c configs/rtdetr/rtdetr_r50vd_6x_coco.yml -o weights=https://bj.bcebos.com/v1/paddledet/models/rtdetr_r50vd_6x_coco.pdparams --infer_img=bus.jpg
+```
+
+
+```shell
+python -c "
+import torch;
+print (torch.cuda.is_available ());
+print (torch.__version__);
+print(torch.version.cuda);
+print(torch.backends.cudnn.version());
+
+import torchvision;
+print(torchvision.__version__)
+
+import torchtext
+print(torchtext.__version__)
+"
 ```
 
 [【小白教学】如何用YOLOv7训练自己的数据集](https://zhuanlan.zhihu.com/p/547878330)
@@ -154,21 +170,7 @@ tensorboard --logdir=log --port=12345
 # jupyter
 [关于python：在jupyter笔记本的单元格内使用sudo](https://www.codenong.com/44996933/)
 
-```shell
-python -c "
-import torch;
-print (torch.cuda.is_available ());
-print (torch.__version__);
-print(torch.version.cuda);
-print(torch.backends.cudnn.version());
 
-import torchvision;
-print(torchvision.__version__)
-
-import torchtext
-print(torchtext.__version__)
-"
-```
 # conda env
 ```bash
 $ conda env list        
