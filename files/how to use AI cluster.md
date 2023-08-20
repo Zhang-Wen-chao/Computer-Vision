@@ -8,7 +8,6 @@ mlu370的内容，一直放在我的本地，给wangt看，还行。
 
 
 
-
 # instruction
 If you want to use the cluster , you have to connecte the school network.
 每个用户的家目录在/public/home/$USERNAME下，限额1TB，用于存放软件、计算数据、基础环境等。
