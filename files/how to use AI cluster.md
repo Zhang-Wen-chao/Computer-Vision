@@ -147,11 +147,6 @@ conda activate eva3d  #切换到有tensorboard的环境
 tensorboard --logdir=log --port=12345
 然后访问http://localhost:6006/
 ```
-## 小技巧
-### 文本处理
-```shell
-sed -i -e '1s/^/TangWei, /' -e 'N;s/n//' *.txt
-```
 # torchtext
 - [torchtext 安装，与pytorch版本匹配](https://blog.csdn.net/qq_41386947/article/details/124275517)
 - [torchtext0.14 实践手册（0.12版本同理）](https://blog.csdn.net/duoyasong5907/article/details/128169017)
