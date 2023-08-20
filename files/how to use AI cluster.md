@@ -1,3 +1,14 @@
+这个文件名字，必须修改
+
+应该是怎么用上科大的slurm系统，给我自己看，给上科大的同学看。（去吸收一下jinjiping的内容。）
+
+另起一个文件应该是，怎么用shic的 服务器。这个是给zhang han bing看。
+
+mlu370的内容，一直放在我的本地，给wangt看，还行。
+
+
+
+
 # instruction
 If you want to use the cluster , you have to connecte the school network.
 每个用户的家目录在/public/home/$USERNAME下，限额1TB，用于存放软件、计算数据、基础环境等。
