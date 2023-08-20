@@ -10,12 +10,6 @@ https://hpc.pku.edu.cn/_book/
 查看自己还有多少空间
 df -h .
 ```
-## jjp让我跑的代码
-https://github.com/ml-jku/hti-cnn
-```shell
-python main.py --config ../configs/gapnet.json --gpu 0 --j 1 --training.batchsize 1
-```
-
 # 申请显卡并测试torch和cuda
 critical : ai_gpu08~60，每个用户限制运行20个作业，限制提交40个作业，每个作业最大运行时长为15天，每个用户限制使用12张显卡
 critical_a40 : ai_gpu01~07/sist-a40-06~09，每个用户限制运行20个作业，限制提交40个作业，每个作业最大运行时长为10天，每个用户限制使用8张显卡
@@ -68,6 +62,7 @@ python ./tools/train.py \
   --num-gpus 1 SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025
 ```
 # 提交作业
+```bash
 #!/bin/bash
 #SBATCH --job-name=yolov7
 #SBATCH --partition=critical_a40
@@ -85,6 +80,7 @@ python ./tools/train.py \
 source activate yolov7
 
 ./run.sh
+```
 # 下载软件
 ### nccl
 ```shell
@@ -155,4 +151,38 @@ tensorboard --logdir=log --port=12345
 ### 文本处理
 ```shell
 sed -i -e '1s/^/TangWei, /' -e 'N;s/n//' *.txt
+```
+# torchtext
+- [torchtext 安装，与pytorch版本匹配](https://blog.csdn.net/qq_41386947/article/details/124275517)
+- [torchtext0.14 实践手册（0.12版本同理）](https://blog.csdn.net/duoyasong5907/article/details/128169017)
+
+# jupyter
+[关于python：在jupyter笔记本的单元格内使用sudo](https://www.codenong.com/44996933/)
+
+```shell
+python -c "
+import torch;
+print (torch.cuda.is_available ());
+print (torch.__version__);
+print(torch.version.cuda);
+print(torch.backends.cudnn.version());
+
+import torchvision;
+print(torchvision.__version__)
+
+import torchtext
+print(torchtext.__version__)
+"
+```
+# conda env
+```bash
+$ conda env list        
+# conda environments:
+#
+base                     /home/student001/anaconda3
+crawler                  /home/student001/anaconda3/envs/crawler  # zwc创建用来学习爬虫
+dereflectformer          /home/student001/anaconda3/envs/dereflectformer
+df                       /home/student001/anaconda3/envs/df
+nlp                      /home/student001/anaconda3/envs/nlp  # zwc创建用来学习nlp
+py39                  *  /home/student001/anaconda3/envs/py39  # zwc创建用来学习cuda,安装了nvcc
 ```
