@@ -8,7 +8,6 @@
 一小时学完numpy
 
 pandas 建立在numpy之上。
-
 matplotlib
 
 一小时学完pytorch
