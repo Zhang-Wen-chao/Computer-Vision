@@ -54,6 +54,8 @@ CUDA Deep Neural Network
 NVIDIA CUDA® 深度神经网络库 (cuDNN) 是一个 GPU 加速的深度神经网络基元库，能够以高度优化的方式实现标准例程（如前向和反向卷积、池化层、归一化和激活层）。
 
 全球的深度学习研究人员和框架开发者都依赖 cuDNN 来实现高性能 GPU 加速。借助 cuDNN，研究人员和开发者可以专注于训练神经网络及开发软件应用，而不必花时间进行低层级的 GPU 性能调整。cuDNN 可加速广泛应用的深度学习框架，包括 Caffe2、Chainer、Keras、MATLAB、MxNet、PaddlePaddle、PyTorch 和 TensorFlow。如需获取经 NVIDIA 优化且已在框架中集成 cuDNN 的深度学习框架容器，请访问 NVIDIA GPU CLOUD 了解详情并开始使用。
+### TensorRT
+NVIDIA TensorRT 是一款用于深度学习推理的 SDK。 TensorRT 提供 API 和解析器，用于从所有主要深度学习框架导入经过训练的模型。 然后，它生成可部署在数据中心以及汽车和嵌入式环境中的优化运行时引擎。
 ## conda
 Conda 是一个开源包管理系统和环境管理系统，可在 Windows、macOS 和 Linux 上运行。 Conda 可以快速安装、运行和更新软件包及其依赖项。 Conda 可以轻松地在本地计算机上创建、保存、加载环境并在环境之间切换。 它是为 Python 程序创建的，但它可以打包和分发任何语言的软件。
 ## pip
