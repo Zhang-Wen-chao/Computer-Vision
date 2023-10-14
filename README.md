@@ -66,4 +66,3 @@ CV、NLP、Audio都有大模型，如何利用这些模型进行更好的多模�
 - existing stuff (pretrained model) new direction
 - plug and play(即插即用)
 - dataset, evaluation and survey
-- 
