@@ -6,6 +6,11 @@ conda env export > environment.yml
 
 conda env export --name <environment_name> > environment.yml
 ```
+# 深度学习
+你只要记住两点:
+(1) 分类就用ResNet、分割就用U-Net、检测就用YOLO;
+(2) 其余的精力你全部投入到数据上面去，把数据清理°好，想方法增加更多有用的数据，学习合理的运用多种trick才是王道。
+发paper的可以忽略。
 # 大模型时代，普通人的科研何去何从
 ## 王晋东不在家
 1. 新的分析和评测
@@ -45,8 +50,3 @@ CV、NLP、Audio都有大模型，如何利用这些模型进行更好的多模�
 如何分析生成式AI对教育、生产力、社会、心理学等诸多层面的影响？
 新技术应该是”有温度“的：如何引导”前人“更加无痛地完成新技术的更迭？
 此类问题的每一个都值得深入探讨。值得一提的是，笔者所在的研究组——微软亚洲研究院社会计算组的大部分研究人员均在做相关研究。也期待未来有更多的合作者加入进来一起合作。社会化问题任重而道远，需要跨学科、全社会的长期密切交流合作。
-## 李沐团队:
-- efficient (PEFT:parameter efficient fine tuning)
-- existing stuff (pretrained model) new direction
-- plug and play(即插即用)
-- dataset, evaluation and survey
