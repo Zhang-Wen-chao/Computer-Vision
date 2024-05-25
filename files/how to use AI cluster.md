@@ -1,12 +1,3 @@
-这个文件名字，必须修改
-
-应该是怎么用上科大的slurm系统，给我自己看，给上科大的同学看。（去吸收一下jinjiping的内容。）
-
-另起一个文件应该是，怎么用shic的 服务器。这个是给zhang han bing看。
-
-mlu370的内容，一直放在我的本地，给wangt看，还行。
-
-
 # instruction
 If you want to use the cluster , you have to connecte the school network.
 每个用户的家目录在/public/home/$USERNAME下，限额1TB，用于存放软件、计算数据、基础环境等。
@@ -68,11 +59,6 @@ import torchtext
 print(torchtext.__version__)
 "
 ```
-
-[【小白教学】如何用YOLOv7训练自己的数据集](https://zhuanlan.zhihu.com/p/547878330)
-
-[Train YOLOv8 on Custom Dataset – A Complete Tutorial](https://learnopencv.com/train-yolov8-on-custom-dataset/)
-
 [ImageNet 2012数据集](https://www.jianshu.com/p/0265226d7b08)
 
 ### detectron2
@@ -125,13 +111,6 @@ https://zhuanlan.zhihu.com/p/397911151
 <!-- LD_LIBRARY_PATH shouldn't contain the current directory when *** building glibc-2.14 -->
 https://zhuanlan.zhihu.com/p/165346316
 
-5月2日晚上22：57，在武晓涛的激励下，再次
-../configure  --prefix=/public/home/zhangwch2022/software/glibc-2.37 --enable-add-ons --disable-avx512 --disable-multi-arch --disable-sysconfig
-make
-5月3日13：02
-make install
-失败
-```
 
 ## 反向代理, 在集群上的GPU上用jupyter
 ```shell
@@ -178,17 +157,3 @@ tensorboard --logdir=log --port=12345
 
 # jupyter
 [关于python：在jupyter笔记本的单元格内使用sudo](https://www.codenong.com/44996933/)
-
-
-# conda env
-```bash
-$ conda env list        
-# conda environments:
-#
-base                     /home/student001/anaconda3
-crawler                  /home/student001/anaconda3/envs/crawler  # zwc创建用来学习爬虫
-dereflectformer          /home/student001/anaconda3/envs/dereflectformer
-df                       /home/student001/anaconda3/envs/df
-nlp                      /home/student001/anaconda3/envs/nlp  # zwc创建用来学习nlp
-py39                  *  /home/student001/anaconda3/envs/py39  # zwc创建用来学习cuda,安装了nvcc
-```
